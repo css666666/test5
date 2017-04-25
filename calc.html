@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="one" type="text">
+    +
+    <input type="text" id="two">
+    <input type="button" value="=">
+    <input type="text" id="three">
+    
+    <script>
+        var one = document.querySelector('#one');
+        var two = document.querySelector('#two');
+        var add = document.querySelector('input[type^="button"]');
+        var three = document.querySelector('#three');
+
+        add.onclick = function () {
+            three.value = parseFloat(one.value) + parseFloat(two.value);
+        }
+    </script>
+</body>
+</html>
